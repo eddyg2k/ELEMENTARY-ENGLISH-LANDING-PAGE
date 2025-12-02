@@ -20,3 +20,13 @@ This project uses React, TypeScript, Tailwind CSS, and Vite. The repository keep
 - `npm run dev` — start the Vite dev server.
 - `npm run build` — build the static site.
 - `npm run preview` — preview the production build.
+
+## Installing dependencies (fixing "vite: command not found")
+
+Running any of the scripts above requires installing dependencies locally first. If `npm run build` complains that `vite` (or any other CLI) is missing, run `npm install` in the project root to populate `node_modules`:
+
+```
+npm install
+```
+
+For CI (including Vercel), use the same command so devDependencies such as Vite are installed before building. If your environment sets proxy variables, ensure they allow access to `https://registry.npmjs.org`.
